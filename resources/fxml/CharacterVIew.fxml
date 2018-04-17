@@ -8,71 +8,83 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.game.controller.CharacterViewController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.game.controller.CharacterViewController">
     <children>
         <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../images/10.jpg" />
+                <Image url="@../images/10.jpg"/>
             </image>
         </ImageView>
-        <ImageView fitHeight="324.0" fitWidth="200.0" layoutX="256.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="306.0" fitWidth="166.0" layoutX="269.0" layoutY="94.0" pickOnBounds="true"
+                   preserveRatio="true">
             <image>
-                <Image url="@../images/8.png" />
+                <Image url="@../images/8.png"/>
             </image>
         </ImageView>
+        <ImageView fx:id="attackElement" fitHeight="109.0" fitWidth="124.0" layoutX="264.0" layoutY="200.0"
+                   pickOnBounds="true" preserveRatio="true"/>
+        <ImageView fx:id="protectionElement" fitHeight="109.0" fitWidth="124.0" layoutX="352.0" layoutY="226.0"
+                   pickOnBounds="true" preserveRatio="true"/>
         <Label layoutX="39.0" layoutY="16.0" text="Атака:" textFill="#5433e8">
             <font>
-                <Font name="Arial Bold Italic" size="18.0" />
+                <Font name="Arial Bold Italic" size="18.0"/>
             </font>
         </Label>
-        <Label fx:id="attach" layoutX="115.0" layoutY="16.0" text="Label" textFill="#5433e7">
+        <Label fx:id="attack" layoutX="115.0" layoutY="16.0" text="Label" textFill="#5433e7">
             <font>
-                <Font name="Arial Bold Italic" size="18.0" />
+                <Font name="Arial Bold Italic" size="18.0"/>
             </font>
         </Label>
         <Label layoutX="210.0" layoutY="16.0" text="Защита:" textFill="#20b220">
             <font>
-                <Font name="Arial Bold Italic" size="18.0" />
+                <Font name="Arial Bold Italic" size="18.0"/>
             </font>
         </Label>
         <Label fx:id="protection" layoutX="304.0" layoutY="16.0" text="Label" textFill="#20b120">
             <font>
-                <Font name="Arial Bold Italic" size="18.0" />
+                <Font name="Arial Bold Italic" size="18.0"/>
             </font>
         </Label>
-      <Label layoutX="405.0" layoutY="16.0" text="Монеты:" textFill="#e52005">
-         <font>
-            <Font name="Arial Bold Italic" size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="cash" layoutX="502.0" layoutY="16.0" text="Label" textFill="#e52005">
-         <font>
-            <Font name="Arial Bold Italic" size="18.0" />
-         </font>
-      </Label>
-        <Button layoutX="207.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleHome" prefHeight="57.0" prefWidth="57.0">
-         <effect>
-            <ImageInput>
-               <source>
-                  <Image url="@../images/12.png" />
-               </source>
-            </ImageInput>
-         </effect></Button>
-        <Button layoutX="283.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleStore" prefHeight="57.0" prefWidth="57.0">
-         <effect>
-            <ImageInput>
-               <source>
-                  <Image url="@../images/13.png" />
-               </source>
-            </ImageInput>
-         </effect></Button>
-        <Button layoutX="359.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleStock" prefHeight="57.0" prefWidth="57.0">
-         <effect>
-            <ImageInput>
-               <source>
-                  <Image url="@../images/14.png" />
-               </source>
-            </ImageInput>
-         </effect></Button>
+        <Label layoutX="405.0" layoutY="16.0" text="Монеты:" textFill="#e52005">
+            <font>
+                <Font name="Arial Bold Italic" size="18.0"/>
+            </font>
+        </Label>
+        <Label fx:id="cash" layoutX="502.0" layoutY="16.0" text="Label" textFill="#e52005">
+            <font>
+                <Font name="Arial Bold Italic" size="18.0"/>
+            </font>
+        </Label>
+        <Button layoutX="207.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleHome" prefHeight="57.0"
+                prefWidth="57.0">
+            <effect>
+                <ImageInput>
+                    <source>
+                        <Image url="@../images/12.png"/>
+                    </source>
+                </ImageInput>
+            </effect>
+        </Button>
+        <Button layoutX="283.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleStore" prefHeight="57.0"
+                prefWidth="57.0">
+            <effect>
+                <ImageInput>
+                    <source>
+                        <Image url="@../images/13.png"/>
+                    </source>
+                </ImageInput>
+            </effect>
+        </Button>
+        <Button layoutX="359.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleStock" prefHeight="57.0"
+                prefWidth="57.0">
+            <effect>
+                <ImageInput>
+                    <source>
+                        <Image url="@../images/14.png"/>
+                    </source>
+                </ImageInput>
+            </effect>
+        </Button>
     </children>
 </AnchorPane>

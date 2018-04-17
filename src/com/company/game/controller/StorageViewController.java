@@ -3,13 +3,12 @@ package com.company.game.controller;
 import com.company.game.MainApp;
 import com.company.game.model.Armor;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.image.ImageView;
 
-public class ShopViewController {
+public class StorageViewController {
     @FXML
     private Label name;
     @FXML
@@ -27,13 +26,12 @@ public class ShopViewController {
 
     private MainApp mainApp;
 
-    public ShopViewController() {
+    public StorageViewController() {
     }
 
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
-        tableView.setItems(mainApp.getArmors());
-
+        tableView.setItems(mainApp.getStorageArmors());
     }
 
     private void showProductDetails(Armor armor) {
@@ -65,18 +63,10 @@ public class ShopViewController {
     }
 
     @FXML
-    private void handleBuy() {
+    private void handleClothe() {
         int selectedIndex = tableView.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
-            if (mainApp.getStorageArmors().contains(mainApp.getArmors().get(selectedIndex))) {
-                mainApp.showAlert(Alert.AlertType.INFORMATION,
-                        "Покупка невозможна. Этот объект уже существует на складе.");
-            } else if (mainApp.getArmors().get(selectedIndex).getPrice() > mainApp.getCharacter().getCash()) {
-                mainApp.showAlert(Alert.AlertType.INFORMATION, "Недостаточно монет");
-            } else {
-                mainApp.getStorageArmors().add(mainApp.getArmors().get(selectedIndex));
-                mainApp.getCharacter().buy(mainApp.getArmors().get(selectedIndex));
-            }
+            mainApp.getCharacter().clothe(mainApp.getStorageArmors().get(selectedIndex));
         }
     }
 
@@ -87,10 +77,11 @@ public class ShopViewController {
 
     @FXML
     private void handleStore() {
+        mainApp.showShopView();
     }
 
     @FXML
     private void handleStock() {
-        mainApp.showStorageView();
+
     }
 }
