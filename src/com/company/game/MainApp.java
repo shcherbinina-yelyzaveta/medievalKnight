@@ -30,21 +30,21 @@ public class MainApp extends Application {
     public MainApp() {
         this.character = new Knight();
         this.armors.add(new Armor("Железный меч", 50, 10, 0,
-                new Image("file:resources/images/1.png")));
+                new Image(MainApp.class.getResource("/images/1.png").toExternalForm())));
         this.armors.add(new Armor("Стальной меч", 100, 15, 0,
-                new Image("file:resources/images/2.png")));
+                new Image(MainApp.class.getResource("/images/2.png").toExternalForm())));
         this.armors.add(new Armor("Секира", 160, 17, 0,
-                new Image("file:resources/images/3.png")));
+                new Image(MainApp.class.getResource("/images/3.png").toExternalForm())));
         this.armors.add(new Armor("Имперский меч", 200, 18, 0,
-                new Image("file:resources/images/4.png")));
+                new Image(MainApp.class.getResource("/images/4.png").toExternalForm())));
         this.armors.add(new Armor("Железный щит", 100, 0, 15,
-                new Image("file:resources/images/18.png")));
+                new Image(MainApp.class.getResource("/images/18.png").toExternalForm())));
         this.armors.add(new Armor("Щит цветной", 100, 0, 15,
-                new Image("file:resources/images/19.png")));
+                new Image(MainApp.class.getResource("/images/19.png").toExternalForm())));
         this.armors.add(new Armor("Щит улучшенный", 200, 0, 20,
-                new Image("file:resources/images/20.png")));
+                new Image(MainApp.class.getResource("/images/20.png").toExternalForm())));
         this.armors.add(new Armor("Щит премиум", 350, 0, 30,
-                new Image("file:resources/images/21.png")));
+                new Image(MainApp.class.getResource("/images/21.png").toExternalForm())));
     }
 
     public Knight getCharacter() {
@@ -67,7 +67,7 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Средневековый рыцарь");
-        this.primaryStage.getIcons().add(new Image("file:resources/images/11.png"));
+        this.primaryStage.getIcons().add(new Image(MainApp.class.getResource("/images/11.png").toExternalForm()));
 
         initRootLayout();
         showCharacterView();
@@ -83,7 +83,7 @@ public class MainApp extends Application {
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
-            Media sound = new Media(this.getClass().getResource("/audio/1.mp3").toExternalForm());
+            Media sound = new Media(MainApp.class.getResource("/audio/1.mp3").toExternalForm());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
             mediaPlayer.setVolume(0.2);
             mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
